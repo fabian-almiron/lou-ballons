@@ -67,7 +67,7 @@ export function HeroSection() {
       </div>
 
       {/* Vertical divider line — sits at the right edge of the card */}
-      <div className="absolute inset-y-0 z-20 hidden w-px bg-white/25 lg:block" style={{ left: "calc(40rem + 1px)" }} />
+      <div className="absolute z-20 hidden w-1 bg-black/50 lg:block" style={{ left: "calc(8rem + 1px)", top: "50%", transform: "translateY(-50%)", height: "60%" }} />
 
       {/* Content: dark card pinned left */}
       <div className="relative z-10 mx-auto w-full max-w-full px-6 py-24 lg:px-40 lg:py-32">
