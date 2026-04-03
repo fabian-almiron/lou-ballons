@@ -21,7 +21,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground leading-relaxed max-w-md mb-6">
-              Thoughtfully designed celebrations, made effortless.
+              Custom balloon decor for Utah County &amp; Salt Lake City. From arches to garlands, we style unforgettable celebrations big and small.
             </p>
             <div className="flex gap-4">
               <a 
@@ -77,16 +77,15 @@ export function Footer() {
           <div>
             <h3 className="font-medium text-foreground mb-4">Contact</h3>
             <ul className="space-y-3 text-muted-foreground">
-              <li>hello@bloomstudio.com</li>
-              <li>(555) 123-4567</li>
-              <li>Los Angeles, CA</li>
+              <li>hello@louballoons.com</li>
+              <li>Utah County &amp; Salt Lake City, UT</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Bloom Studio. All rights reserved.
+            © {new Date().getFullYear()} Lou Balloons. All rights reserved.
           </p>
         </div>
       </div>

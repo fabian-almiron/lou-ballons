@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { useRef } from "react"
 import {
   motion,
@@ -82,26 +81,21 @@ export function HeroSection() {
           animate="show"
           className="max-w-2xl"
         >
-          <motion.p
-            variants={fadeUp}
-            className="text-primary mb-5 text-sm font-medium tracking-[0.2em] uppercase"
-          >
-            Custom Balloon Installations
-          </motion.p>
-
           <motion.h1
             variants={fadeUp}
-            className="font-serif text-foreground mb-6 text-5xl tracking-tight text-balance md:text-6xl lg:text-7xl"
+            className="font-display text-foreground mb-6 text-6xl font-black uppercase tracking-tight text-balance md:text-7xl lg:text-8xl"
+            style={{ WebkitTextStroke: "2px currentColor", color: "transparent", WebkitTextFillColor: "white", textShadow: "3px 3px 0px #1a1a1a" }}
           >
-            It&apos;s Time to{" "}
-            <span className="text-primary">Celebrate!</span>
+            It&apos;s{" "}<br />
+            Time To{" "}<br />
+            Party!
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="mb-10 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
-            Custom balloon decor—from arches to garlands. We style unforgettable celebrations, big and small, with a little extra confetti energy.
+            Custom Balloon Decor for Utah County &amp; Salt Lake City From arches to garlands, we style unforgettable celebrations big and small.
           </motion.p>
 
           <motion.div
@@ -115,19 +109,10 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                className="group rounded-full gap-2 px-8 font-semibold shadow-md shadow-primary/15"
+                className="group gap-2 px-8 font-semibold shadow-md shadow-primary/15"
               >
                 Book Our Services
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </motion.div>
-            <motion.div
-              whileHover={reduceMotion ? undefined : { scale: 1.03 }}
-              whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-              transition={gentleSpring}
-            >
-              <Button variant="outline" size="lg" className="rounded-full px-8" asChild>
-                <Link href="/#gallery">View Our Work</Link>
               </Button>
             </motion.div>
           </motion.div>

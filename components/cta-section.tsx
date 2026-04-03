@@ -50,13 +50,13 @@ export function CTASection() {
               variants={ctaChild}
               className="font-serif text-primary-foreground mb-6 text-4xl tracking-tight text-balance md:text-5xl lg:text-6xl"
             >
-              Let&apos;s Make It Unforgettable
+              Ready to Make Your Event Pop?
             </motion.h2>
             <motion.p
               variants={ctaChild}
               className="text-primary-foreground/80 mx-auto mb-10 max-w-2xl text-lg leading-relaxed md:text-xl"
             >
-              Ready to bring your event to life? We&apos;d love to create something beautiful for you.
+              Serving Utah County &amp; Salt Lake City — let&apos;s create something beautiful together. Reach out today and let&apos;s start planning!
             </motion.p>
             <motion.div
               variants={ctaChild}
@@ -70,7 +70,7 @@ export function CTASection() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="group rounded-full gap-2 px-8"
+                  className="group rounded-none gap-2 px-8"
                 >
                   Book Your Event
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -84,7 +84,7 @@ export function CTASection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground rounded-full border-primary-foreground/30 bg-transparent px-8"
+                  className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground rounded-none border-primary-foreground/30 bg-transparent px-8"
                 >
                   Get a Quote
                 </Button>
