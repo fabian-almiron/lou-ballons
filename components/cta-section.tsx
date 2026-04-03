@@ -69,8 +69,8 @@ export function CTASection() {
               >
                 <Button
                   size="lg"
-                  variant="secondary"
-                  className="group gap-2 px-8"
+                  variant="white"
+                  className="group gap-2"
                 >
                   Book Your Event
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -84,7 +84,6 @@ export function CTASection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground border-primary-foreground/30 bg-transparent px-8"
                 >
                   Get a Quote
                 </Button>

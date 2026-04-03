@@ -58,10 +58,10 @@ export function ServicesSection() {
                 What sets us apart is our commitment to personalized balloon design and thoughtful service. We collaborate closely with each client to understand their vision, then bring it to life with custom balloon arches, elegant centerpieces, and playful bouquets. Whether you&apos;re planning a birthday bash or a formal event, we&apos;ll style it to match your vibe — beautifully and effortlessly!
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild className="rounded-none px-8 font-semibold">
+                <Button asChild size="lg">
                   <Link href="/#contact">Corporate Events</Link>
                 </Button>
-                <Button asChild variant="outline" className="rounded-none border-primary/60 px-8 font-semibold text-primary hover:bg-primary/5">
+                <Button asChild variant="green" size="lg">
                   <Link href="/#contact">Special Occasions</Link>
                 </Button>
               </div>
@@ -137,7 +137,7 @@ export function ServicesSection() {
                   <p className="mt-2 text-xs leading-relaxed text-muted-foreground">Clients rave about our creativity, communication, and flawless installs.</p>
                 </div>
               </div>
-              <Button asChild variant="outline" className="rounded-none border-primary/60 px-10 font-semibold text-primary hover:bg-primary/5">
+              <Button asChild variant="green" size="lg">
                 <Link href="/#contact">Hire Us!</Link>
               </Button>
             </motion.div>
@@ -179,7 +179,7 @@ export function ServicesSection() {
               <p className="mb-8 text-center text-base leading-relaxed text-muted-foreground">
                 Celebrate the milestones that matter most with custom balloon decor designed to elevate any special occasion. Whether you&apos;re hosting a baby shower, bridal shower, birthday party, engagement, or wedding, we&apos;ll create a display that brings your vision to life. Each install is thoughtfully tailored to your theme, color palette, and venue. With a streamlined setup process and a keen eye for detail, we&apos;ll make your event feel as memorable as the moment you&apos;re celebrating.
               </p>
-              <Button asChild className="rounded-none px-10 font-semibold">
+              <Button asChild size="lg">
                 <Link href="/#contact">Hire Us!</Link>
               </Button>
             </motion.div>

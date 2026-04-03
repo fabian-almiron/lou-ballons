@@ -106,10 +106,7 @@ export function HeroSection() {
               whileTap={reduceMotion ? undefined : { scale: 0.97 }}
               transition={bouncySpring}
             >
-              <Button
-                size="lg"
-                className="group gap-2 px-8 font-semibold shadow-md shadow-primary/15"
-              >
+              <Button size="lg" className="group gap-2">
                 Book Our Services
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
