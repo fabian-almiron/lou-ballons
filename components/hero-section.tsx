@@ -55,11 +55,12 @@ export function HeroSection() {
           style={{ y: bgY }}
         >
           <Image
-            src="/images/hero-bg.avif"
+            src="/images/hero-bg-hq.jpg"
             alt="Balloon installation backdrop"
             fill
             className="object-cover object-center"
             priority
+            quality={90}
             sizes="100vw"
           />
         </motion.div>
