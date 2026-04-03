@@ -16,14 +16,14 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.15,
+      staggerChildren: 0.12,
+      delayChildren: 0.2,
     },
   },
 }
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: gentleSpring },
 }
 
@@ -40,12 +40,7 @@ export function HeroSection() {
   const bgY = useTransform(
     scrollYProgress,
     [0, 1],
-    reduceMotion ? ["0%", "0%"] : ["0%", "20%"],
-  )
-  const bgScale = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduceMotion ? [1, 1] : [1, 1.05],
+    reduceMotion ? ["0%", "0%"] : ["0%", "18%"],
   )
 
   return (
@@ -53,63 +48,64 @@ export function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-svh items-center overflow-hidden pt-20"
     >
-      {/* Background image with parallax */}
+      {/* Full-bleed background — no gradient, photo shows through fully */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="relative h-[120%] w-full"
-          style={{ y: bgY, scale: bgScale }}
+          className="relative h-[118%] w-full"
+          style={{ y: bgY }}
         >
           <Image
-            src="/images/hero-bg.avif"
-            alt="Elegant balloon installation"
+            src="/images/hero-bg-new.jpg"
+            alt="Black and white balloon installation with couple"
             fill
             className="object-cover object-center"
             priority
             sizes="100vw"
           />
         </motion.div>
-        {/* Left-to-right gradient so text is legible over the photo */}
-        <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-background/10" />
-        {/* Bottom fade to blend into next section */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
       </div>
 
+      {/* Content: dark card pinned left */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
         <motion.div
           variants={container}
           initial={skipEnter}
           animate="show"
-          className="max-w-2xl"
+          className="max-w-xs sm:max-w-sm"
         >
-          <motion.h1
-            variants={fadeUp}
-            className="font-display mb-6 text-6xl uppercase tracking-tight text-balance text-white md:text-7xl lg:text-8xl"
-          >
-            It&apos;s<br />
-            Time To<br />
-            Party!
-          </motion.h1>
-
-          <motion.p
-            variants={fadeUp}
-            className="mb-10 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl"
-          >
-            Custom Balloon Decor for Utah County &amp; Salt Lake City From arches to garlands, we style unforgettable celebrations big and small.
-          </motion.p>
-
+          {/* Dark frosted card */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-wrap items-center gap-4"
+            className="rounded-2xl bg-[#1a1a1a]/85 px-7 py-8 backdrop-blur-sm"
           >
-            <motion.div
-              whileHover={reduceMotion ? undefined : { scale: 1.05 }}
-              whileTap={reduceMotion ? undefined : { scale: 0.97 }}
-              transition={bouncySpring}
+            <motion.h1
+              variants={fadeUp}
+              className="font-display mb-5 text-4xl uppercase leading-tight text-white sm:text-5xl"
             >
-              <Button size="lg" className="main-btn black-btn group gap-2">
-                Book Our Services
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
+              It&apos;s<br />
+              Time To<br />
+              Party!
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="mb-7 text-sm leading-relaxed text-white/75 sm:text-base"
+            >
+              Custom Balloon Decor for Utah County &amp; Salt Lake City From arches to garlands, we style unforgettable celebrations big and small.
+            </motion.p>
+
+            <motion.div variants={fadeUp}>
+              <motion.div
+                whileHover={reduceMotion ? undefined : { scale: 1.04 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.97 }}
+                transition={bouncySpring}
+                className="inline-block"
+              >
+                <Button size="lg" className="main-btn green-btn group gap-2">
+                  Book Our Services
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
