@@ -55,8 +55,8 @@ export function HeroSection() {
           style={{ y: bgY }}
         >
           <Image
-            src="/images/hero-bg-new.jpg"
-            alt="Black and white balloon installation with couple"
+            src="/images/hero-bg.avif"
+            alt="Balloon installation backdrop"
             fill
             className="object-cover object-center"
             priority
