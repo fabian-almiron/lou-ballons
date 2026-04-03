@@ -20,10 +20,7 @@ export function AboutSection() {
             viewport={viewportOnce}
             transition={gentleSpring}
           >
-            <h2
-              className="font-display mb-6 text-5xl font-black uppercase leading-none tracking-tight text-background md:text-6xl lg:text-7xl"
-              style={{ WebkitTextStroke: "2px white" }}
-            >
+            <h2 className="font-display mb-6 text-5xl uppercase leading-none tracking-tight text-background md:text-6xl lg:text-7xl">
               About<br />The<br />Founder
             </h2>
             <p className="mb-2 font-semibold text-background">Hello!</p>

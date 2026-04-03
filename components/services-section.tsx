@@ -51,8 +51,7 @@ export function ServicesSection() {
               viewport={viewportOnce}
               transition={{ ...gentleSpring, delay: 0.1 }}
             >
-              <h2 className="font-display mb-6 text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl"
-                style={{ WebkitTextStroke: "2px currentColor" }}>
+              <h2 className="font-display mb-6 text-4xl uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
                 Make Your Event<br />Unforgettable
               </h2>
               <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-muted-foreground">

@@ -83,11 +83,10 @@ export function HeroSection() {
         >
           <motion.h1
             variants={fadeUp}
-            className="font-display text-foreground mb-6 text-6xl font-black uppercase tracking-tight text-balance md:text-7xl lg:text-8xl"
-            style={{ WebkitTextStroke: "2px currentColor", color: "transparent", WebkitTextFillColor: "white", textShadow: "3px 3px 0px #1a1a1a" }}
+            className="font-display mb-6 text-6xl uppercase tracking-tight text-balance text-white md:text-7xl lg:text-8xl"
           >
-            It&apos;s{" "}<br />
-            Time To{" "}<br />
+            It&apos;s<br />
+            Time To<br />
             Party!
           </motion.h1>
 

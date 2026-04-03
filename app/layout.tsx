@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, Inter, Bungee_Shade } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CartProvider } from '@/lib/cart-context'
 import { CartSidebar } from '@/components/cart-sidebar'
@@ -17,9 +17,16 @@ const inter = Inter({
   display: 'swap',
 });
 
+const bungeeShade = Bungee_Shade({
+  subsets: ["latin"],
+  weight: "400",
+  variable: '--font-display',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
-  title: 'Bloom Studio | Custom Balloon Installations',
-  description: 'Boutique event styling with custom balloon installations. From intimate gatherings to large-scale celebrations, we create elevated, modern balloon designs that transform your space.',
+  title: 'Lou Balloons | Custom Balloon Decor Utah County & Salt Lake City',
+  description: 'Custom balloon decor for Utah County & Salt Lake City. From arches to garlands, Lou Balloons styles unforgettable celebrations big and small with quick setup and pro-level service.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -46,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${bungeeShade.variable}`}>
       <body className="font-sans antialiased">
         <CartProvider>
           {children}

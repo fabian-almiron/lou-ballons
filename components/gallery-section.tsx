@@ -51,8 +51,7 @@ export function GallerySection() {
     <section id="gallery" className="bg-[#f5f0e8] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.h2
-          className="font-display mb-12 text-center text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl"
-          style={{ WebkitTextStroke: "2px currentColor" }}
+          className="font-display mb-12 text-center text-4xl uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl"
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={viewportOnce}
