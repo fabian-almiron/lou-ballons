@@ -49,7 +49,7 @@ export function ProcessSection() {
   const skipEnter = reduceMotion ? "show" : "hidden"
 
   return (
-    <section id="process" className="py-24 lg:py-32">
+    <section id="process" className="scroll-mt-24 py-24 lg:py-32 lg:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           className="mx-auto mb-16 max-w-2xl text-center"

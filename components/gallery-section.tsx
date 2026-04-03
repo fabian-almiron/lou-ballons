@@ -11,25 +11,25 @@ const eventTypes = [
     label: "Birthday Parties",
     src: "/images/birthday-parties.avif",
     alt: "Birthday party balloon decor",
-    href: "/#contact",
+    href: "/contact",
   },
   {
     label: "Weddings",
     src: "/images/weddings.avif",
     alt: "Elegant wedding balloon decor",
-    href: "/#contact",
+    href: "/contact",
   },
   {
     label: "Corporate Events",
     src: "/images/corporate.avif",
     alt: "Corporate event balloon decor",
-    href: "/#contact",
+    href: "/contact",
   },
   {
     label: "Holidays",
     src: "/images/holidays.avif",
     alt: "Holiday balloon garland and decor",
-    href: "/#contact",
+    href: "/contact",
   },
 ]
 
@@ -96,7 +96,7 @@ export function GallerySection() {
 
         <div className="text-center">
           <Button asChild className="main-btn black-btn">
-            <Link href="/#services">Services</Link>
+            <Link href="/services">Services</Link>
           </Button>
         </div>
       </div>

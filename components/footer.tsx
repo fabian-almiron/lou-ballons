@@ -52,22 +52,22 @@ export function Footer() {
             <h3 className="font-medium text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/services" className="text-muted-foreground hover:text-foreground transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#gallery" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/gallery" className="text-muted-foreground hover:text-foreground transition-colors">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About
+                <Link href="/our-story" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Our Story
                 </Link>
               </li>
               <li>
-                <Link href="#process" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/services#process" className="text-muted-foreground hover:text-foreground transition-colors">
                   How It Works
                 </Link>
               </li>

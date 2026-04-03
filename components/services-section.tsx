@@ -64,10 +64,10 @@ export function ServicesSection() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild size="lg" className="main-btn black-btn">
-                  <Link href="/#contact">Corporate Events</Link>
+                  <Link href="/contact">Corporate Events</Link>
                 </Button>
                 <Button asChild variant="green" size="lg" className="main-btn green-btn">
-                  <Link href="/#contact">Special Occasions</Link>
+                  <Link href="/contact">Special Occasions</Link>
                 </Button>
               </div>
             </motion.div>
@@ -185,7 +185,7 @@ export function ServicesSection() {
               </div>
 
               <Button asChild variant="green" size="lg" className="main-btn green-btn rounded-md px-10">
-                <Link href="/#contact">Hire Us!</Link>
+                <Link href="/contact">Hire Us!</Link>
               </Button>
             </motion.div>
 
@@ -236,7 +236,7 @@ export function ServicesSection() {
           </p>
           <div>
             <Button asChild size="lg" className="main-btn black-btn rounded-md px-10">
-              <Link href="/#contact">Hire Us!</Link>
+              <Link href="/contact">Hire Us!</Link>
             </Button>
           </div>
         </motion.div>

@@ -3,29 +3,23 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 import { Handbag, Instagram, Menu, User, X } from "lucide-react"
 import { useCart } from "@/lib/cart-context"
 import { bouncySpring, gentleSpring, playfulSpring } from "@/lib/motion"
 
 const NAV_ITEMS = [
-  { href: "/", label: "Home", sectionId: "" },
-  { href: "/#shop", label: "Services", sectionId: "shop" },
-  { href: "/#about", label: "Our Story", sectionId: "about" },
-  { href: "/#gallery", label: "Gallery", sectionId: "gallery" },
-  { href: "/#contact", label: "Contact", sectionId: "contact" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/our-story", label: "Our Story" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
 ] as const
 
-function useHashSegment() {
-  const [hash, setHash] = useState("")
-  useEffect(() => {
-    const read = () => setHash(window.location.hash.replace(/^#/, ""))
-    read()
-    window.addEventListener("hashchange", read)
-    return () => window.removeEventListener("hashchange", read)
-  }, [])
-  return hash
+function navPathActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/"
+  return pathname === href
 }
 
 function navLinkClass(active: boolean) {
@@ -42,13 +36,6 @@ export function Header() {
   const { toggleCart, totalItems } = useCart()
   const reduceMotion = useReducedMotion()
   const pathname = usePathname()
-  const hash = useHashSegment()
-
-  const isNavActive = (sectionId: string) => {
-    if (sectionId === "")
-      return pathname === "/" && hash === ""
-    return hash === sectionId
-  }
 
   return (
     <motion.header
@@ -83,14 +70,14 @@ export function Header() {
           {/* Center: desktop nav */}
           <div className="hidden min-w-0 flex-1 justify-center md:flex">
             <div className="flex items-center gap-5 lg:gap-8">
-              {NAV_ITEMS.map(({ href, label, sectionId }) => (
+              {NAV_ITEMS.map(({ href, label }) => (
                 <motion.div
-                  key={sectionId || "home"}
+                  key={href}
                   whileHover={reduceMotion ? undefined : { y: -2 }}
                 >
                   <Link
                     href={href}
-                    className={navLinkClass(isNavActive(sectionId))}
+                    className={navLinkClass(navPathActive(pathname, href))}
                     scroll
                   >
                     {label}
@@ -169,11 +156,11 @@ export function Header() {
                 animate={{ y: 0 }}
                 transition={playfulSpring}
               >
-                {NAV_ITEMS.map(({ href, label, sectionId }) => (
+                {NAV_ITEMS.map(({ href, label }) => (
                   <Link
-                    key={sectionId || "home"}
+                    key={href}
                     href={href}
-                    className={navLinkClass(isNavActive(sectionId))}
+                    className={navLinkClass(navPathActive(pathname, href))}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {label}

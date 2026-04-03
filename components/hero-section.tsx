@@ -8,6 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { bouncySpring, gentleSpring } from "@/lib/motion"
@@ -105,9 +106,11 @@ export function HeroSection() {
                 transition={bouncySpring}
                 className="inline-block"
               >
-                <Button size="lg" className="main-btn green-btn group gap-2">
-                  Book Our Services
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button asChild size="lg" className="main-btn green-btn group gap-2">
+                  <Link href="/services">
+                    Book Our Services
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
               </motion.div>
             </motion.div>

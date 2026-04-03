@@ -48,7 +48,7 @@ export function PopularPicksSection() {
       <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <motion.h2
           id="popular-picks-heading"
-          className="mb-10 text-center text-3xl font-bold tracking-tight text-foreground sm:mb-12 sm:text-4xl md:text-5xl"
+          className="font-serif mb-10 text-center text-[1.75rem] font-normal leading-[1.2] tracking-tight text-foreground sm:mb-12 sm:text-3xl md:text-4xl lg:text-[2.65rem] lg:leading-[1.18]"
           initial={reduceMotion ? false : { opacity: 0, y: 16 }}
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={viewportOnce}
@@ -67,10 +67,10 @@ export function PopularPicksSection() {
           {picks.map((product) => (
             <motion.li key={product.id} variants={listItem} className="min-w-0">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group block outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <div className="relative aspect-[3/4] overflow-hidden rounded-none bg-muted">
+                <div className="relative aspect-3/4 overflow-hidden rounded-none bg-muted">
                   <Image
                     src={product.image}
                     alt={product.name}

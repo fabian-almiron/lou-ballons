@@ -1,17 +1,15 @@
-import { Header } from "@/components/header"
+import { AboutSection } from "@/components/about-section"
+import { CTASection } from "@/components/cta-section"
+import { GallerySection } from "@/components/gallery-section"
 import { HeroSection } from "@/components/hero-section"
 import { IntroSection } from "@/components/intro-section"
 import { ServicesSection } from "@/components/services-section"
-import { GallerySection } from "@/components/gallery-section"
-import { AboutSection } from "@/components/about-section"
-import { CTASection } from "@/components/cta-section"
-import { Footer } from "@/components/footer"
 import { SectionDivider } from "@/components/section-divider"
+import { SiteChrome } from "@/components/site-chrome"
 
 export default function Home() {
   return (
-    <main>
-      <Header />
+    <SiteChrome>
       <HeroSection />
       <SectionDivider align="left" tone="light" bleed="lg" />
       <IntroSection />
@@ -26,7 +24,6 @@ export default function Home() {
       <AboutSection />
       <SectionDivider align="right" tone="dark" className="bg-foreground" />
       <CTASection />
-      <Footer />
-    </main>
+    </SiteChrome>
   )
 }

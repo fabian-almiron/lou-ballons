@@ -49,7 +49,7 @@ export function IntroSection() {
             </p>
             <div className="h-px w-12 bg-white/50 mb-6" />
             <Link
-              href="/#about"
+              href="/our-story"
               className="text-sm font-semibold tracking-wide text-white underline underline-offset-4 hover:text-white/80 transition-colors"
             >
               Read More
