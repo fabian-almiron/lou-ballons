@@ -4,7 +4,7 @@ import { Instagram, Facebook, Mail } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-card">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">

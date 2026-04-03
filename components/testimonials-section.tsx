@@ -31,8 +31,8 @@ export function TestimonialsSection() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length)
 
   return (
-    <section className="bg-foreground py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+    <section className="bg-foreground py-24 lg:py-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.h2
           className="mb-16 text-center font-serif text-4xl font-bold tracking-tight text-background md:text-5xl"
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export function TestimonialsSection() {
                   {testimonials[current].author}
                 </p>
                 <div className="mx-auto mb-6 h-px w-12 bg-background/40" />
-                <blockquote className="mx-auto max-w-2xl text-lg leading-relaxed text-background/90 md:text-xl">
+                <blockquote className="mx-auto max-w-4xl text-lg leading-relaxed text-background/90 md:text-xl">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </blockquote>
               </motion.div>

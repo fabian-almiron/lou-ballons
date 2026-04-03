@@ -36,7 +36,7 @@ export function CTASection() {
     <section id="contact" className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
-          className="bg-primary relative overflow-hidden rounded-3xl px-8 py-16 text-center lg:px-16 lg:py-24"
+          className="bg-primary relative overflow-hidden rounded-none px-8 py-16 text-center lg:px-16 lg:py-24"
           variants={ctaContainer}
           initial={skipEnter}
           whileInView="show"

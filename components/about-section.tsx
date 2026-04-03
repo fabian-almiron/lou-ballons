@@ -4,14 +4,28 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { SectionDivider } from "@/components/section-divider"
 import { gentleSpring, viewportOnce } from "@/lib/motion"
 
 export function AboutSection() {
   const reduceMotion = useReducedMotion()
 
   return (
-    <section id="about" className="bg-foreground py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-foreground py-24 lg:py-32"
+    >
+      {/* Soft floating glows — same ambient motion as CTA, tuned for dark band */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden
+      >
+        <div className="animate-float-soft absolute -top-36 -left-28 h-[min(32rem,90vw)] w-[min(32rem,90vw)] rounded-full bg-primary/20 blur-[68px]" />
+        <div className="animate-float-soft-reverse absolute top-[18%] -right-24 h-[min(26rem,75vw)] w-[min(26rem,75vw)] rounded-full bg-accent/14 blur-[56px]" />
+        <div className="animate-float-soft absolute -bottom-44 left-[8%] h-[min(22rem,70vw)] w-[min(22rem,70vw)] rounded-full bg-background/12 blur-[52px]" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: text */}
           <motion.div
@@ -31,8 +45,7 @@ export function AboutSection() {
               <Link href="/#services">Services</Link>
             </Button>
 
-            {/* Divider line */}
-            <div className="mt-12 h-16 w-px bg-background/30" />
+            <SectionDivider scope="inline" tone="dark" className="mt-12" />
           </motion.div>
 
           {/* Right: photo */}
@@ -44,7 +57,7 @@ export function AboutSection() {
             transition={{ ...gentleSpring, delay: 0.08 }}
           >
             <motion.div
-              className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-muted"
+              className="relative aspect-[4/5] overflow-hidden  bg-muted"
               whileHover={reduceMotion ? undefined : { scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
             >
