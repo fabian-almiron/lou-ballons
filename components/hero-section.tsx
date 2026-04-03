@@ -66,22 +66,25 @@ export function HeroSection() {
         </motion.div>
       </div>
 
+      {/* Vertical divider line — sits at the right edge of the card */}
+      <div className="absolute inset-y-0 z-20 hidden w-px bg-white/25 lg:block" style={{ left: "calc(40rem + 1px)" }} />
+
       {/* Content: dark card pinned left */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+      <div className="relative z-10 mx-auto w-full max-w-full px-6 py-24 lg:px-40 lg:py-32">
         <motion.div
           variants={container}
           initial={skipEnter}
           animate="show"
-          className="max-w-xs sm:max-w-sm"
+          className="max-w-xs sm:max-w-lg"
         >
           {/* Dark frosted card */}
           <motion.div
             variants={fadeUp}
-            className="rounded-2xl bg-[#1a1a1a]/85 px-7 py-8 backdrop-blur-sm"
+            className=" bg-[#18191c] px-16 py-12 "
           >
             <motion.h1
               variants={fadeUp}
-              className="font-display mb-5 text-4xl uppercase leading-tight text-white sm:text-5xl"
+              className="font-display mb-5 text-4xl uppercase leading-tight text-white sm:text-7xl"
             >
               It&apos;s<br />
               Time To<br />

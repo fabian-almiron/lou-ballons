@@ -57,7 +57,7 @@ export function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={playfulSpring}
     >
-      <nav className="mx-auto max-w-7xl px-6 lg:px-8">
+      <nav className="mx-auto max-w-full px-6 lg:px-20">
         <div className="flex h-20 items-center gap-4">
           <motion.div
             whileHover={reduceMotion ? undefined : { scale: 1.03 }}
