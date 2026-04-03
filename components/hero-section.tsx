@@ -51,7 +51,7 @@ export function HeroSection() {
       {/* Full-bleed background — no gradient, photo shows through fully */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="relative h-[118%] w-full"
+          className="relative h-[88%] w-full"
           style={{ y: bgY }}
         >
           <Image
@@ -67,10 +67,10 @@ export function HeroSection() {
       </div>
 
       {/* Vertical divider line — sits at the right edge of the card */}
-      <div className="absolute z-20 hidden w-1 bg-black/50 lg:block" style={{ left: "calc(8rem + 1px)", top: "50%", transform: "translateY(-50%)", height: "60%" }} />
+      <div className="absolute z-20 hidden w-[1.5px] bg-[#878771] lg:block" style={{ left: "calc(8rem + 1px)", top: "49%", transform: "translateY(-50%)", height: "63%" }} />
 
       {/* Content: dark card pinned left */}
-      <div className="relative z-10 mx-auto w-full max-w-full px-6 py-24 lg:px-40 lg:py-32">
+      <div className="relative z-10 mx-auto w-full max-w-full px-6 py-24 lg:px-40 lg:py-10">
         <motion.div
           variants={container}
           initial={skipEnter}

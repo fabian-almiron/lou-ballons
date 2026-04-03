@@ -9,26 +9,26 @@ import { gentleSpring, viewportOnce } from "@/lib/motion"
 const eventTypes = [
   {
     label: "Birthday Parties",
-    src: "/images/gallery-1.jpg",
-    alt: "Pink Barbie-themed birthday balloon arch",
+    src: "/images/birthday-parties.jpg",
+    alt: "Orange and gold birthday balloon arch",
     href: "/#contact",
   },
   {
     label: "Weddings",
-    src: "/images/gallery-2.jpg",
-    alt: "Elegant outdoor wedding balloon arch",
+    src: "/images/weddings.jpg",
+    alt: "Peach and orange wedding balloon arch with Happy Birthday sign",
     href: "/#contact",
   },
   {
     label: "Corporate Events",
-    src: "/images/gallery-4.jpg",
-    alt: "Blue and orange corporate event balloon installation",
+    src: "/images/corporate.jpg",
+    alt: "Corporate event photographer with balloon backdrop",
     href: "/#contact",
   },
   {
     label: "Holidays",
-    src: "/images/gallery-6.jpg",
-    alt: "Cute Easter bunny foil balloons",
+    src: "/images/holidays.jpg",
+    alt: "Sage green and white holiday balloon garland",
     href: "/#contact",
   },
 ]
