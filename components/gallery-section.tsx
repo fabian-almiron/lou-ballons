@@ -88,7 +88,7 @@ export function GallerySection() {
         </motion.div>
 
         <div className="text-center">
-          <Button asChild className="rounded-none px-12 font-semibold">
+          <Button asChild className="main-btn black-btn">
             <Link href="/#services">Services</Link>
           </Button>
         </div>

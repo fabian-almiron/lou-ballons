@@ -27,7 +27,7 @@ export function AboutSection() {
             <p className="mb-8 leading-relaxed text-background/80">
               I&apos;m McKenzie— wife, mom, &amp; owner of Lou Balloons. I believe life is full of moments worth celebrating! Whether big or small, I want to make your events &amp; occasions memorable. My company offers incredible balloon styling for all occasions &amp; we can&apos;t wait to work with you!
             </p>
-            <Button asChild variant="white" size="lg">
+            <Button asChild variant="white" size="lg" className="main-btn white-btn">
               <Link href="/#services">Services</Link>
             </Button>
 
