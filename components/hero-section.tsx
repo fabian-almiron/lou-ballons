@@ -87,9 +87,9 @@ export function HeroSection() {
               variants={fadeUp}
               className="font-display mb-5 text-4xl uppercase leading-tight text-white sm:text-7xl"
             >
-              It&apos;s<br />
-              Time To<br />
-              Party!
+              Balloon Decor<br />
+              Utah County<br />
+              &amp; Salt Lake City
             </motion.h1>
 
             <motion.p
