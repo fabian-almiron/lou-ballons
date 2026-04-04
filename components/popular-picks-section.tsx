@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
 import { gentleSpring, viewportOnce } from "@/lib/motion"
 import { products, type Product } from "@/lib/products"
+import { cn } from "@/lib/utils"
 
 const POPULAR_ORDER = [
   "balloon-towers",
@@ -35,14 +36,18 @@ const listItem = {
   },
 }
 
-export function PopularPicksSection() {
+type PopularPicksSectionProps = {
+  className?: string
+}
+
+export function PopularPicksSection({ className }: PopularPicksSectionProps) {
   const reduceMotion = useReducedMotion()
   const picks = getPopularPicks()
   const skipStagger = reduceMotion ? "show" : "hidden"
 
   return (
     <section
-      className="w-full bg-white py-16 lg:py-24"
+      className={cn("w-full bg-white py-16 lg:py-24", className)}
       aria-labelledby="popular-picks-heading"
     >
       <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">

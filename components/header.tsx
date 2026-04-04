@@ -121,11 +121,11 @@ export function Header() {
               className="hidden md:block"
             >
               <Link
-                href="/login"
+                href="/account"
                 className="text-primary flex items-center gap-2 text-sm font-semibold tracking-tight hover:text-primary/85"
               >
                 <User className="h-5 w-5" strokeWidth={2} />
-                Log In
+                My Account
               </Link>
             </motion.div>
 
@@ -177,12 +177,12 @@ export function Header() {
                   Instagram
                 </a>
                 <Link
-                  href="/login"
+                  href="/account"
                   className="text-primary flex items-center gap-2 text-sm font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <User className="h-5 w-5" />
-                  Log In
+                  My Account
                 </Link>
               </motion.div>
             </motion.div>

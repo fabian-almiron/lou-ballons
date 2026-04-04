@@ -23,7 +23,7 @@ export default function ServicesPage() {
         title="Services"
         description="Arches, garlands, corporate installs, and everything you need to make your celebration unforgettable."
       />
-      <ServicesSection />
+      <ServicesSection variant="inner" />
       <GrabAndGoSection />
       <GarlandAddonsSection />
       <PropRentalsSection />

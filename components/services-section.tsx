@@ -9,11 +9,21 @@ import { PopularPicksSection } from "@/components/popular-picks-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { SectionDivider } from "@/components/section-divider"
 
-export function ServicesSection() {
+export type ServicesSectionVariant = "full" | "inner"
+
+type ServicesSectionProps = {
+  /** `inner`: services route only — skips hero, corporate band, and testimonials. */
+  variant?: ServicesSectionVariant
+}
+
+export function ServicesSection({ variant = "full" }: ServicesSectionProps) {
   const reduceMotion = useReducedMotion()
+  const isFull = variant === "full"
 
   return (
     <>
+      {isFull ? (
+        <>
       {/* Make Your Event Unforgettable */}
       <section id="services" className="w-full bg-background py-20 lg:py-28">
         <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-60">
@@ -214,10 +224,12 @@ export function ServicesSection() {
         size="compact"
         className="bg-[#f5f0e8]"
       />
+        </>
+      ) : null}
 
-      <PopularPicksSection />
+      <PopularPicksSection className={isFull ? undefined : "pt-6 lg:pt-10"} />
 
-      <TestimonialsSection />
+      {isFull ? <TestimonialsSection /> : null}
 
       {/* Special Occasions — cream text column, full-bleed photo */}
       <section className="flex w-full flex-col overflow-hidden lg:flex-row lg:min-h-[min(85vh,640px)]">

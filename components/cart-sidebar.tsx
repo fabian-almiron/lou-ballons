@@ -41,7 +41,12 @@ export function CartSidebar() {
             <div className="text-center py-12">
               <ShoppingBag className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
               <p className="text-muted-foreground">Your cart is empty</p>
-              <Button onClick={closeCart} variant="outline" className="mt-4">
+              <Button
+                type="button"
+                size="lg"
+                onClick={closeCart}
+                className="main-btn black-btn rounded-md mt-4"
+              >
                 Continue Shopping
               </Button>
             </div>
@@ -107,10 +112,21 @@ export function CartSidebar() {
             <p className="text-xs text-muted-foreground">
               Final pricing will be confirmed based on your event details and location.
             </p>
-            <Button className="w-full" size="lg">
+            <Button
+              type="button"
+              size="lg"
+              variant="green"
+              className="main-btn green-btn rounded-md w-full"
+            >
               Request Quote
             </Button>
-            <Button variant="outline" className="w-full" onClick={closeCart}>
+            <Button
+              type="button"
+              size="lg"
+              variant="outline-dark"
+              className="main-btn bordered-dark rounded-md w-full"
+              onClick={closeCart}
+            >
               Continue Shopping
             </Button>
           </div>
